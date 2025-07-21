@@ -8,6 +8,7 @@ class Login extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         centerTitle: false,
+
         backgroundColor: const Color.fromARGB(255, 240, 215, 91),
         title: RichText(
           text: TextSpan(
@@ -78,21 +79,34 @@ class Login extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(height: 10),
+          SizedBox(height: 40),
 
           Container(
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20),
 
-              child: TextField(
-                obscureText: true,
-                keyboardType: TextInputType.emailAddress,
-                decoration: InputDecoration(
-                  hintText: 'Enter your Email Address',
-                  border: OutlineInputBorder(),
-                  // labelText: 'Email',
-                  icon: Icon(Icons.email, color: Colors.teal),
-                ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    "Email address",
+                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
+                    textAlign: TextAlign.left,
+                  ),
+                  SizedBox(height: 5),
+                  TextField(
+                    obscureText: true,
+                    keyboardType: TextInputType.emailAddress,
+                    decoration: InputDecoration(
+                      hintText: 'Enter your Email Address',
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(8)),
+                      ),
+                      // labelText: 'Email',
+                      prefixIcon: Icon(Icons.email, color: Colors.teal),
+                    ),
+                  ),
+                ],
               ),
             ),
           ),
