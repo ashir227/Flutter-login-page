@@ -91,7 +91,7 @@ class Login extends StatelessWidget {
                   Text(
                     "Email address",
                     style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
-                    textAlign: TextAlign.left,
+                    // textAlign: TextAlign.left,
                   ),
                   SizedBox(height: 5),
                   TextField(
@@ -107,6 +107,57 @@ class Login extends StatelessWidget {
                     ),
                   ),
                 ],
+              ),
+            ),
+          ),
+          SizedBox(height: 20),
+          Container(
+            // color: Colors.blue,
+            child: Padding(
+              padding: EdgeInsetsGeometry.symmetric(horizontal: 20),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    "Password",
+                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
+                    // textAlign: TextAlign.left,
+                  ),
+                  SizedBox(height: 5),
+                  TextField(
+                    obscureText: false,
+                    keyboardType: TextInputType.visiblePassword,
+                    decoration: InputDecoration(
+                      hintText: 'Enter your Password',
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(8)),
+                        borderSide: BorderSide(color: Colors.black),
+                      ),
+                      // labelText: 'Email',
+                      prefixIcon: Icon(Icons.password, color: Colors.teal),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+          SizedBox(
+            height: 50,
+            width: double.infinity,
+            child: ElevatedButton(
+              onPressed: () {},
+              child: Text("Sign in"),
+              style: ElevatedButton.styleFrom(
+                backgroundColor: const Color.fromARGB(
+                  255,
+                  193,
+                  49,
+                  49,
+                ), // 🔲 Button background
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(6),
+                  // elevation: 3, // 🔘 Rounded corners
+                ),
               ),
             ),
           ),
